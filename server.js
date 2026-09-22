@@ -137,9 +137,10 @@ app.post('/api/login', (req, res) => {
 
         res.json({
             mensaje: 'Login exitoso',
-            token: token
+            token: token,
+            usuario_id: usuario.id
         });
-    });
+    }); 
 });
 
 app.get('/api/notas', autenticarToken, (req, res) => {
